@@ -10,7 +10,7 @@ export default function List(props) {
                     <h2>{props.header}</h2>
                 </header>
                 <div className="List-cards">
-                    {props.allCards.map((card) =>
+                    {props.card.map((card) =>
                     <Card 
                         key={card.id}
                         title={card.title}
