@@ -11,13 +11,22 @@ describe('List component', () => {
         ReactDOM.unmountComponentAtNode(div);
     });
 
+    // it('Renders the UI as expected', () => {
+    //     const tree = renderer
+    //         .create(<List 
+    //             header= {''} 
+    //             card={[]}
+    //             />)
+    //         .toJSON();
+    //     expect(tree).toMatchSnapshot();
+    // })
     it('Renders the UI as expected', () => {
         const tree = renderer
-            .create(<List 
-                header={''}
-                card={[]}
-                />)
-            .toJSON();
+        .create(<List
+        header={'Some string'}
+        card={[{id: 1, title: 'Title1', content: 'Content1'}, {id: 2, title: 'Title2', content: 'Content2'}]}
+        />)
+        .toJSON();
         expect(tree).toMatchSnapshot();
-    })
+        })
 })
