@@ -9,7 +9,7 @@ class App extends Component {
       lists: [],
       allCards: {}
     }
-  };
+  }; 
 
   render() {
     const { store } = this.props
@@ -35,3 +35,7 @@ class App extends Component {
 }
 
 export default App
+
+
+// Nick Chang10:20 PM
+// let a = () => {};    Empty function

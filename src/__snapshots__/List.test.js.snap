@@ -9,12 +9,38 @@ exports[`List component Renders the UI as expected 1`] = `
       className="List-header"
     >
       <h2>
-        
+        Some string
       </h2>
     </header>
     <div
       className="List-cards"
     >
+      <div
+        className="Card"
+      >
+        <button>
+          Delete
+        </button>
+        <h3>
+          Title1
+        </h3>
+        <p>
+          Content1
+        </p>
+      </div>
+      <div
+        className="Card"
+      >
+        <button>
+          Delete
+        </button>
+        <h3>
+          Title2
+        </h3>
+        <p>
+          Content2
+        </p>
+      </div>
       <div>
         <button
           className="List-add-button"

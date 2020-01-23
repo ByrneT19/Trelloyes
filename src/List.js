@@ -2,11 +2,12 @@ import React from 'react';
 import './List.css';
 import Card from './Card';
 
+List.defaultProps = { 
+    header: '', 
+    card: [] }
+
 export default function List(props) {
-    // List.defaultProps = {
-    //     header: props.header,
-    //     card: props.cardIds.map(id => store.allCards[id])
-    //    }
+   
     return (
         <div>
             <section className="List">
@@ -34,3 +35,4 @@ export default function List(props) {
         </div>
     )
 }
+
