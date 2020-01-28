@@ -2,10 +2,6 @@ import React from 'react';
 import './List.css';
 import Card from './Card';
 
-List.defaultProps = { 
-    header: '', 
-    card: [] }
-
 export default function List(props) {
    
     return (
@@ -17,16 +13,18 @@ export default function List(props) {
                 <div className="List-cards">
                     {props.card.map((card) =>
                     <Card 
+                        onDeleteItem={props.onDeleteItem}
                         key={card.id}
+                        id={card.id}
                         title={card.title}
                         content={card.content}
                     />
                     )}
                     <div>
                         <button
+                        onClick={() => props.addRandomItem(props.id)}
                         type='button'
                         className='List-add-button'
-                        onDeleteItem={props.onDeleteItem}
                         >
                             + Add Random Card
                         </button>
@@ -36,4 +34,10 @@ export default function List(props) {
         </div>
     )
 }
+
+List.defaultProps = { 
+    addRandomItem: () => {},    
+}
+
+
 

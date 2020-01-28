@@ -4,7 +4,7 @@ import './Card.css';
 const Card = (props) => {
     return (
         <div className="Card">
-            <button onClick={(card) => props.onDeleteItem(card.id)}
+            <button onClick={() => props.onDeleteItem(props.id)}
             >
                 Delete
             </button>
@@ -12,6 +12,10 @@ const Card = (props) => {
             <p>{props.content}</p>
         </div>
     )
+}
+
+Card.defaultProps = {
+    onDeleteItem: () => {}
 }
 
 export default Card;
