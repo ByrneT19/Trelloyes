@@ -4,7 +4,10 @@ import './Card.css';
 const Card = (props) => {
     return (
         <div className="Card">
-            <button>Delete</button>
+            <button onClick={() => props.onDeleteItem(props.card)}
+            >
+                Delete
+            </button>
             <h3>{props.title}</h3>
             <p>{props.content}</p>
         </div>

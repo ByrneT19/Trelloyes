@@ -4,12 +4,20 @@ import './App.css';
 
 class App extends Component {
 
-  static defaultProps = {
+  state = {
     store: {
       lists: [],
       allCards: {}
     }
   }; 
+
+  deleteItemButton() {
+    console.log('delete item clicked')
+  }
+
+  addRandomCardButton() {
+    console.log('random card button clicked')
+  }
 
   render() {
     const { store } = this.props
@@ -25,6 +33,8 @@ class App extends Component {
                 key={list.id}
                 header={list.header}
                 card={list.cardIds.map(id => store.allCards[id])}
+                onDeleteItem={this.deleteItemButton}
+                addRandomItem={this.addRandomCardButton}
               />
             ))}
           </div>
